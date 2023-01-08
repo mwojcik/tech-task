@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="11.1.0" />
+      <PackageReference Include="NameGenerator" Version="2.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Company.TruckDrivers.Domain\Company.TruckDrivers.Domain.csproj" />
+      <ProjectReference Include="..\Company.TruckDrivers.Shared\Company.TruckDrivers.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

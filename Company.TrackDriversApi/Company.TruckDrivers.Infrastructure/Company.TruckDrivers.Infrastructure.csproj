@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>Company.TruckDrivers.Infrastructure</AssemblyName>
+        <RootNamespace>Company.TruckDrivers.Infrastructure</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="11.1.0" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+      <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.31.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Company.TruckDrivers.Application\Company.TruckDrivers.Application.csproj" />
+      <ProjectReference Include="..\Company.TruckDrivers.Domain\Company.TruckDrivers.Domain.csproj" />
+      <ProjectReference Include="..\Company.TruckDrivers.Shared\Company.TruckDrivers.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+        <HintPath>..\..\..\..\..\..\..\..\..\..\usr\local\share\dotnet\shared\Microsoft.AspNetCore.App\6.0.7\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

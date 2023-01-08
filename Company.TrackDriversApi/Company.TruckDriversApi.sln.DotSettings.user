@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=31a573fd_002D4415_002D44e2_002D9ebc_002Dfcbe83837a4b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetTrackDriversQueryHandlerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::C52C3F83-C044-4EA7-8FF3-AB663ED2866D::net6.0::Company.TruckDrivers.Tests.UnitTests.GetTruckDriversQueryHandlerTests&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C52C3F83-C044-4EA7-8FF3-AB663ED2866D::net6.0::Company.TruckDrivers.Tests.ApiTests.DriversControllerTests.get_truck_drivers_should_return_all_drivers_where_location_is_not_set&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C52C3F83-C044-4EA7-8FF3-AB663ED2866D::net6.0::Company.TruckDrivers.Tests.ApiTests.CustomExceptionMiddlewareTests.custom_exception_middleware_should_return_not_found_status_when_resource_not_found_exception_occured&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C52C3F83-C044-4EA7-8FF3-AB663ED2866D::net6.0::Company.TruckDrivers.Tests.ApiTests.CustomExceptionMiddlewareTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

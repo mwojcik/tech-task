@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Company.TruckDriversApi</name>
+    </assembly>
+    <members>
+        <member name="M:Company.TruckDriversApi.Controllers.DriversController.Get(System.String)">
+            <summary>
+            Fetch All Drivers. 
+            </summary>
+            <param name="location"> City where the driver is located</param>
+            <returns></returns>
+        </member>
+        <member name="M:Company.TruckDriversApi.Controllers.DriversController.Post">
+            <summary>
+            Init Sample Data
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,49 @@
+using Company.TruckDrivers.Infrastructure;
+using Company.TruckDriversApi.Configurations;
+using Company.TruckDriversApi.Exceptions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Web;
+using Microsoft.OpenApi.Models;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddInfrastructureComponents();
+
+// Add services to the container.
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApi(builder.Configuration);
+
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.ConfigureSwagger(builder.Configuration);
+builder.Services.AddLogging();
+builder.Services.Configure<ApiBehaviorOptions>(options => { options.SuppressModelStateInvalidFilter = true; });
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        
+        c.OAuthAppName("Swagger Client");
+        c.OAuthClientId(app.Configuration["AzureAd:ClientId"]);
+        c.OAuthClientSecret("wNc8Q~zTXZ9qWeS5xYBvqCwvdEjLER_pB2cl2a5h");
+        c.OAuthUseBasicAuthenticationWithAccessCodeGrant();
+    });
+    
+}
+
+
+app.UseMiddleware<CustomExceptionMiddleware>();
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers();
+app.Run();
+
