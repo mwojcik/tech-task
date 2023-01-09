@@ -6,6 +6,6 @@ public static class Mapper
 {
     public static TruckDriverDto Map(TruckDriver entity)
     {
-        return new TruckDriverDto(entity.FirstName, entity.LastName, new LocationDto(entity.Location?.City));
+        return new TruckDriverDto(entity.Id,entity.FirstName, entity.LastName, new LocationDto(entity.Location?.City));
     }
 }
