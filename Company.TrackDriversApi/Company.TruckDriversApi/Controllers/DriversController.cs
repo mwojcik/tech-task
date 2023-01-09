@@ -7,8 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Company.TruckDriversApi.Controllers;
 
-//[Authorize(Roles = "Administrator")]
-//[Authorize]
+[Authorize(Roles = "Admin")]
 [ApiController]
 [Route("[controller]")]
 public class DriversController : ControllerBase

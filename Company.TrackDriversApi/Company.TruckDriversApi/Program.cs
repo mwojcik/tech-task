@@ -1,7 +1,9 @@
+using System.IdentityModel.Tokens.Jwt;
 using Company.TruckDrivers.Infrastructure;
 using Company.TruckDriversApi.Configurations;
 using Company.TruckDriversApi.Exceptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Web;
 using Microsoft.OpenApi.Models;
@@ -10,10 +12,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddInfrastructureComponents();
 
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+
 // Add services to the container.
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddMicrosoftIdentityWebApi(builder.Configuration);
+
 
 
 builder.Services.AddControllers();
@@ -33,8 +38,7 @@ if (app.Environment.IsDevelopment())
         
         c.OAuthAppName("Swagger Client");
         c.OAuthClientId(app.Configuration["AzureAd:ClientId"]);
-        c.OAuthClientSecret("wNc8Q~zTXZ9qWeS5xYBvqCwvdEjLER_pB2cl2a5h");
-        c.OAuthUseBasicAuthenticationWithAccessCodeGrant();
+        c.OAuthUsePkce();
     });
     
 }
