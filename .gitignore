@@ -5,3 +5,5 @@ Company.TrackDriversApi/Company.TruckDrivers.Infrastructure/bin
 */**/obj
 */**/bin
 Company.TrackDriversApi/Company.TruckDriversApi/appsettings.Development.json
+src/.idea
+src/Company.TrackDriversApi/.idea/.idea.Company.TruckDriversApi/.idea
