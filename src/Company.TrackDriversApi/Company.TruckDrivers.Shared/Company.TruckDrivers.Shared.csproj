@@ -8,4 +8,8 @@
         <RootNamespace>Company.TruckDrivers.Shared</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.3" />
+    </ItemGroup>
+
 </Project>

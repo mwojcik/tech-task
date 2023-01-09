@@ -30,7 +30,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options => { options.SuppressMode
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+//if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>

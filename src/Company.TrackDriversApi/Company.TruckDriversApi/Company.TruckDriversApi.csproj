@@ -5,9 +5,9 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>aspnet-Company.TrackDriversApi-92135BDE-2BB0-4CE4-A787-EBCF72908B70</UserSecretsId>
-        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <AssemblyName>Company.TruckDriversApi</AssemblyName>
         <RootNamespace>Company.TruckDriversApi</RootNamespace>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
