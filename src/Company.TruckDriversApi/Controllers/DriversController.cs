@@ -25,6 +25,7 @@ public class DriversController : ControllerBase
     /// <param name="location"> City where the driver is located</param>
     /// <returns></returns>
     [HttpGet]
+    [ProducesResponseType((int)HttpStatusCode.Forbidden)]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
     [ProducesResponseType(typeof(ProblemDetails),(int)HttpStatusCode.NotFound)]
     [ProducesResponseType(typeof(ProblemDetails),(int)HttpStatusCode.InternalServerError)]
